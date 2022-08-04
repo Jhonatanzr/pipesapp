@@ -1,0 +1,68 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col p-md-4">
+        <p-card header="uppercase"
+                [subheader]="nombreLower | uppercase">
+        </p-card>
+    </div>
+    <div class="p-col p-md-4">
+        <p-card header="lowercase"
+                [subheader]="nombreUpper | lowercase">
+        </p-card>
+    </div>
+    <div class="p-col p-md-4">
+        <p-card header="titlecase"
+                [subheader]="nombreCompleto | titlecase">
+        </p-card>  
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipes para mostrar las fechas.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-12 p-sm-12 p-md-6">
+        <p-card>
+            <ul>
+                <li> fecha </li>
+                <li> fecha | date </li>
+                <li> fecha | date: 'short' </li>
+                <li> fecha | date: 'long' </li>
+                <li> fecha | date: 'dd MMM, yyyy - hh:mm a' </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> fecha | date: 'long':'GMT-6' </li>
+                <li> fecha | date: 'long':'GMT-4' </li>
+                <li> fecha | date: 'long':'GMT-4':'en' </li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="p-col-12 p-sm-12 p-md-6">
+        <p-card>
+            <ul>
+                <li> {{ fecha }} </li>
+                <li> {{ fecha | date }} </li>
+                <li> {{ fecha | date: 'short' }} </li>
+                <li> {{ fecha | date: 'long' }} </li>
+                <li> {{ fecha | date: 'dd MMM, yyyy - hh:mm a' }} </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{ fecha | date: 'long':'GMT-6' }} </li>
+                <li> {{ fecha | date: 'long':'GMT-4' }} </li>
+                <li> {{ fecha | date: 'long':'GMT-4':'fr' }} </li>
+            </ul>
+        </p-card>
+    </div>
+</div>
